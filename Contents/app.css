@@ -1,0 +1,14 @@
+/* File: app.css */
+/* Author: Haris Siddiqi */
+/* COMP125 Assignment 2*/
+/* Description: Styles the website */
+
+/* Image margin adjustment */
+#profile-image {
+    margin-bottom: 30px;
+}
+
+/* Text margin adjustment */
+#projects-text {
+    margin-top: 40px;
+}

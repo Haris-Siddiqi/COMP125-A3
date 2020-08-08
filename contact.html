@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- CSS Section -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./Contents/app.css">
+</head>
+<body>
+
+    <!-- Nav bar -->
+    <header>
+    </header>
+
+    <!-- Contact form -->
+    <main style="margin-bottom: 50px;">
+        <div class="container">
+            <h3 style="margin-top: 20px;">Let's get in touch!</h3>
+            <div id="errorMessage" class="alert alert-danger" role="alert" hidden>
+
+            </div>
+            <hr>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="firstName">Name</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" aria-describedby="firstName"
+                placeholder="John Doe" required autofocus>
+              </div>
+
+              <div class="form-group">
+                <label for="contactNumber">Number (optional)</label>
+                <input type="tel" class="form-control" id="contactNumber" name="contactNumber" aria-describedby="contactNumber"
+                placeholder="905-555-5555">
+              </div>
+
+              <div class="form-group">
+                <label for="emailAddress">Email</label>
+                <input type="email" class="form-control" id="emailAddress" name="emailAddress" aria-describedby="emailAddress"
+                placeholder="johndoe@ballin.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="shortMessage">Message</label>
+                <textarea placeholder="A string walks into a bar. The bartender goes we don't serve your kind here. The string leaves, twists himself up, parts his hair and comes back. The bartender says aren't you the same guy from just a minute ago. The string says I'm a frayed knot." class="form-control" id="shortMessage"  name="shortMessage" rows="3" aria-describedby="shortMessage" ></textarea>
+              </div>
+
+              <button id="submitButton" type="submit" class="btn btn-primary btn-lg" onClick="window.location='index.html';"><i class="fas fa-envelope-square"></i> Send</button>
+              <button id="resetButton" type="reset" class="btn btn-warning btn-lg"><i class="fas fa-comment-slash"></i> Reset</button>
+            </form>  
+
+        </div>
+    </main>
+    
+    <!-- Footer with github link -->
+    <footer>
+    </footer>
+
+
+    <!-- JavaScript Section -->
+
+    <!-- 3rd Party JavaScript Libraries -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- App Scripts -->
+    <script src="./Scripts/app.js"></script>
+</body>
+</html>
