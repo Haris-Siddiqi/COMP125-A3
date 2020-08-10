@@ -183,14 +183,12 @@
     function Start()
     {
        console.log('%cApp Started...', "color:white; font-size: 24px;");   
-
+       loadFooter();
+       loadHeader();
        let title = highlightActiveLink();
        let success_projects = addtexttoservices();
        let success = addParagraphsToJumbotron();
        let formValidated = validateForm();
-
-       loadFooter();
-       loadHeader();
     }
 
     window.addEventListener("load", Start);
