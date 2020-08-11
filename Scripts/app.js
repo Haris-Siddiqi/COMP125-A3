@@ -198,27 +198,14 @@
             if ((parText.readyState === 4) && (parText.status === 200)) {
                 let rawParagraph = JSON.parse(parText.responseText);
                 let paragraphArray = rawParagraph.Paragraphs;
-                let variable = document.getElementsByClassName("text")[0];
+                let checker = document.getElementsByClassName("text")[0];
 
                 // Insert text at appropriate point
-                if (variable = document.getElementsByClassName("welcome")[0]) {
+                if (checker = document.getElementsByClassName("welcome")[0]) {
                     document.getElementsByClassName("welcome")[0].innerHTML = paragraphArray[0].welcome;
-                } else if (variable = document.getElementsByClassName("services")[0]) {
+                } else if (checker = document.getElementsByClassName("services")[0]) {
                     document.getElementsByClassName("services")[0].innerHTML = paragraphArray[0].services;
                 }
-
-                /*
-                // Loop through classnames
-                let classArray = ["welcome", "services"];
-                for (name of classArray) {
-                    // Insert text at appropriate point
-                    let variable = document.getElementsByClassName(name)[0];
-                    if (variable = document.getElementsByClassName("welcome")[0]) {
-                        document.getElementsByClassName("welcome")[0].innerHTML = paragraphArray[0].welcome;
-                    } else if (variable = document.getElementsByClassName("services")[0]) {
-                        document.getElementsByClassName("services")[0].innerHTML = paragraphArray[0].services;
-                    }
-                } */
             }
         });
     }
