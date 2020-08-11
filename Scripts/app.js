@@ -32,7 +32,8 @@
         return title;
     }
 
-    // Adds text to index.html
+    // Adds text to index.html (old way)
+    /*
     function addParagraphsToJumbotron() 
     {
         // step 1 hook into the spot (element) on the page
@@ -71,6 +72,7 @@
         }
         return false;
     }
+    */
 
     // Adds functionality to form
     function validateForm()
@@ -112,6 +114,7 @@
     }
 
     // Adds text to services.html
+    /*
     function addtexttoservices()
     {
         // step 1 hook into the spot (element) on the page
@@ -137,7 +140,7 @@
             return true;
         }
         return false;
-    }
+    } */
 
     // Loads footer into page using AJAX
     function loadFooter() {
@@ -179,15 +182,46 @@
         });
     }
 
+    // Load paragraphs into page using AJAX
+    function addParagraphs() {
+        console.info("Paragraphs Loading...");
+
+        // Creates object
+        let parText = new XMLHttpRequest();
+
+        // Get data and send
+        parText.open("GET", "Scripts/paragraphs.json"); 
+        parText.send();
+
+        // Load data
+        parText.addEventListener("readystatechange", function () {
+            if ((parText.readyState === 4) && (parText.status === 200)) {
+                let rawParagraph = JSON.parse(parText.responseText);
+                let paragraphArray = rawParagraph.Paragraphs;
+
+                // Loop through classnames
+                let classArray = ["welcome", "services"];
+                for (name of classArray) {
+                    // Insert text at appropriate point
+                    let variable = document.getElementsByClassName(name)[0];
+                    if (variable = document.getElementsByClassName("welcome")[0]) {
+                        document.getElementsByClassName("welcome")[0].innerHTML = paragraphArray[0].welcome;
+                    } else if (variable = document.getElementsByClassName("services")[0]) {
+                        document.getElementsByClassName("services")[0].innerHTML = paragraphArray[0].services;
+                    }
+                }
+            }
+        });
+    }
+
     // Call functions
     function Start()
     {
        console.log('%cApp Started...', "color:white; font-size: 24px;");   
        loadFooter();
        loadHeader();
+       addParagraphs();
        let title = highlightActiveLink();
-       let success_projects = addtexttoservices();
-       let success = addParagraphsToJumbotron();
        let formValidated = validateForm();
     }
 

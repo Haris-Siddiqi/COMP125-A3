@@ -1,0 +1,6 @@
+{
+    "Paragraphs": [{
+        "welcome": "<img src='./Assets/images/haris_image.png' width='300' height='300' alt='Haris Siddiqi' id='profile-image'><p>\n</p><p>My name is Haris Siddiqi and I am a second semester software engineering student at Centennial College.My academic and professional goals are:</p><p>- Performing exceptionally in my courses</p><p>- Getting internship and work experience</p><p>- Choosing a niche to specialize in within software development</p><p>-------------</p><p>The technologies I am competent in include:</p><p>- HTML, CSS, JS</p><p>- Python (soon!)</p><p>- C#</p><p>- Unix/Linux</p><p>- SQL</p>",
+        "services": "<p id='projects-text'>Implemented a rational number class in C#.</p><img src='./Assets/images/rationalclass.jpg' alt='rational class'><p id='projects-text'>Made a fully responsive landing page.</p><img src='./Assets/images/landingpage.jpg' alt='landing page'><p id='projects-text'>Completed CSS3 design course.</p><img src='./Assets/images/css30days.jpg' alt='css3 course' style='margin-bottom: 100px;'>"
+    }]
+}
