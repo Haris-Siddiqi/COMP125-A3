@@ -1,6 +1,6 @@
 /* File: app.js */
 /* Author: Haris Siddiqi */
-/* COMP125 Assignment 2*/
+/* COMP125 Assignment 3*/
 /* Description: Functions to add functionality to the site */
 
 "use strict";
