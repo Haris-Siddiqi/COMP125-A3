@@ -184,7 +184,7 @@
 
     // Load paragraphs into page using AJAX
     function addParagraphs() {
-        console.info("Paragraphs Loading...");
+        console.log("Paragraphs Loading...");
 
         // Creates object
         let parText = new XMLHttpRequest();
